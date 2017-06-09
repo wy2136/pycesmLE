@@ -4,8 +4,8 @@ Data from CESM-LENS (CESM Large Ensemble) simulations are often not on longitude
 
 ### Displaced-pole to latitude-longitude grids
 
-<img src="examples/greenland_pole_grid.jpg" style="width:300px">
-<img src="examples/grid_lat_lon.png" style="width:308px">
+<img src="examples/greenland_pole_grid.jpg" style="width:200px">
+<img src="examples/grid_lat_lon.png" style="width:205px">
 
 ##### Examples
 
