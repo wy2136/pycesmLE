@@ -28,7 +28,7 @@ def convert(ifile, lon_vec=None, lat_vec=None, ofile=None,
         print('[File Exists]:', ofile)
         return
 
-    # read and modifiy target and Ps data
+    # read and modifiy target data
     ds = open_dataset(ifile)
     if time_adjusted: # raw data time is drifted
         ds['time'] = ds['time'].to_index().shift(-1, 'MS')
@@ -36,7 +36,7 @@ def convert(ifile, lon_vec=None, lat_vec=None, ofile=None,
     if time_slice is not None:
         ds = ds.sel(time=time_slice)
 
-    # calculate the 4-D (time, lev, lat, lon) pressure field
+    # lon and lat arrays
     var_name = [key for key in list(ds.data_vars)
         if ds[key].dims == ('time', 'nj', 'ni')][0]
     da = ds[var_name]
